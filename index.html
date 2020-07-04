@@ -1,1 +1,466 @@
-Coming Soon ...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me: Simon</title>
+    <!-- <link rel="stylesheet" href="./resources\css\index.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+<!-- Styling (would be much better in css file) -->
+    <style>
+
+        * {
+             /* border: 0.5px solid red;  */
+            box-sizing: border-box;
+        } 
+
+        html {
+            font-size: 16px;
+        }
+
+        h2,
+        p,
+        label,
+        li a {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+
+        p,
+        label {
+            font-weight: 300;
+            font-size: 1.25rem;
+            
+        }
+
+        h2 {
+            margin: 0;
+            padding-top: 15px;
+        }
+
+
+        ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style-type: none;
+        min-height: 50px;
+        margin: 0; 
+        padding: 0;
+        background-color:  hsl(207, 100%, 12%);
+        justify-content: left;
+        }
+
+        li a {
+        display: block;
+        padding-top: 10px;
+        font-weight: 700; 
+        width:180px;
+        height: auto;
+        min-height: 50px;
+        text-decoration: none;
+        background-color:  hsl(207, 100%, 12%);
+        color: whitesmoke;
+        font-size: 1.2rem;
+        /* text-align: center; */
+        } 
+
+        li a:hover {
+            background-color: hsla(207, 100%, 36%, 0.4);
+        }
+
+        .banner {
+            background-image: url("https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+            background-size: cover;
+            position: relative;
+            text-align: center;
+            margin: 0;
+        }
+
+        .banner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: mintcream;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        #simon-name {
+            z-index: 100;
+            position: relative;
+            margin: 0;
+            padding: 10px;
+            font-family: 'Covered By Your Grace', cursive;
+            font-size: 3.5rem;
+            color: hsl(3, 98%, 68%);
+        }
+
+
+        #simon-img {
+            height: 200px;
+            width: 200px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 100%;
+            z-index: 100;
+            position: relative;
+            vertical-align: middle;
+        }
+
+        .my_education {
+            display: flex;
+            align-items: flex-start;
+
+        }
+
+        .my_education.img_block {
+            display: flex;
+        }
+
+        .my_education img {
+            height: 100px;
+            width: auto;
+        }
+    
+        .main {
+            min-width: 400px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .education {
+            background-color: hsl(200, 100%, 98%);
+        }
+
+        .container_images {
+            display: inline-flex;
+            min-height: 150px;
+            width: 20%;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            max-height: 400px;
+            padding: 15px;
+        }
+
+        .container_text {
+            display: block;
+            min-height: 200px;
+            width: 75%;
+            flex-direction: row;
+            /* align-items: center; */
+            /* justify-content: space-between; */
+            /* text-align: center; */
+            padding: 0;
+            margin: 0 auto;
+
+        }
+
+        .cont_l_small {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            border: 1px solid black;
+            background-size: cover;
+            align-content: stretch;
+        } 
+
+        #areal {
+            background-image: url("https://images.unsplash.com/photo-1472121779802-43c68a9f405f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1191&q=80");
+        }
+
+        #ou_crest {
+            background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+        }
+
+        .editing {
+            background-color:hsl(140, 100%, 99%);
+        }
+
+        #talk {
+            background-image: url("https://i.imgur.com/T0xR9pb.jpg");
+        }
+
+        #edting {
+            padding-top: 0;
+        }
+
+        /* Science section */
+
+        .science_container {
+            margin: 0 auto;
+        }
+
+        .science_main {
+            background-color: hsl(219, 79%, 8%);
+            color: white;
+        }
+
+        .sci_spacing {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .sci_card {
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .sci_column {
+            display: inline-flex;
+            flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        img {
+            height: auto;
+            /* width: auto; */
+            max-width: 300px;
+            margin: 5px auto;    
+        }
+
+        footer {
+            background-color: hsl(207, 100%, 12%);
+            padding: 0 1rem;
+        }
+        
+        footer .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-content: space-between;
+            padding: 0;
+            color: white;
+            width: 95%;
+        }
+
+        footer li,
+        footer ul {
+            background-color: hsl(207, 100%, 12%);
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        .to_top {
+            margin-right: 10%;
+            background-color: slategrey;
+            color: #fff;
+            font-size: 50px;
+            margin: 5% 5%;
+            padding: 16px 40px;
+            border-radius: 5%;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            background-color: slategrey;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .container_images {
+            display: none;
+            width: 0;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .container_text  {
+                width: 95%;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .main.education,
+            .main.editing {
+                /* width: 100%; */
+             min-width: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+                li a {
+
+            padding: 0;
+            min-height: 25px;
+            font-size: 0.9rem;
+            } 
+        }   
+        
+        @media only screen and (max-width: 500px) {
+            ul {
+                justify-content: center;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+                li a {
+
+            padding: 0;
+            width: 100px;
+            min-height: 25px;
+            font-size: 0.9rem;
+            } 
+        }   
+
+
+    </style>    
+
+</head>
+
+
+<!-- Body -->
+
+<body>
+  <!-- Navbar section -->
+        <nav> 
+            <ul class="navbar" id="top">
+                <li><a href="#education_text">My Education</a></li>
+                <li><a href="#editor_text">Editor</a></li>
+                <li><a href="#science_text">Science</a></li>
+                <li><a href="#science_text">Journalism</a></li>
+                <li><a href="#contact">Get in touch</a></li>
+                <li><a href="#attributions">Image attributions</a></li>
+            </ul>
+        </nav>
+
+  <!-- Banner section -->
+    <div class="banner">
+         <h1 id="simon-name">Simon R. T. Neil</h1>
+         <img id="simon-img" src="https://media-exp1.licdn.com/dms/image/C4D03AQENu6f6KaMCig/profile-displayphoto-shrink_400_400/0?e=1596067200&v=beta&t=sil1lNHco_4S612BeUFTAYfIWC7YEb2Wsv-rHJTW3LA" alt="Image of Simon">
+    </div>
+  
+  <!-- Education -->
+        <div class="main education">
+            <!-- Education Images -->
+            <div class="container_images">        
+                <div class="cont_l_small" id="areal"></div>
+                <div class="cont_l_small" id="ou_crest"></div>
+            </div>
+            <!-- Education text-->
+            <div class="container_text">
+                <h2 id="education_text">My Education</h2>
+                <p>I got my DPhil (PhD) from the University of Oxford, in Physical and Theoretical Chemistry, in 2012.</p>
+                <p>My DPhil (Oxford's fancy name for a PhD) spanned a lot of areas: physics, chemistry, biochemistry,
+                    to name just a few. At its core though, was the development and building of very sensitive instruments to detect tiny changes in the <a href="https://en.wikipedia.org/wiki/Absorption" target="_blank">absorption</a> of substances.
+                    As part of this, I used <a href="https://en.wikipedia.org/wiki/LabVIEW" target="_blank">LabVIEW</a> (a graphical programming language) to control the instruments' data collection and analysis. I also did data analysis using <a href="https://www.mathworks.com/products/matlab.html" target="_blank">MATLAB</a>.
+                    Having constructed the intruments, I used them to investigate fundamental precesses behind bird navigation.
+                </p>
+                <p>Before my DPhil, I received my Masters in Chemistry from the University of Leicester, where I graduated top of my class.
+                I was awarded four prizes for examination performance, in consecutive years, including the GlaxoSmithKline Prize and <a href="https://le.ac.uk/chemistry/study/undergraduate/prizes/hunter-medal" target="_blank">Hunter Medal</a> for best graduating MChem student.
+                I also recieved an Undergraduate Nuffield Research Bursary, which I used for a project in computational chemistry.
+                </p>
+                <p>I wrote and published lots of articles during my time in Oxford and beyond. Being an author is what made me want to be an editor!
+                    You can take a look at some of my articles in the later section, on <a href="#science"></a>Science!</p>
+            </div>
+        </div>
+
+   <!-- Editing section -->
+        <div class="main editing">
+            <div class="container_text">
+                <h2 id="editor_text">Editor</h2>
+                <p>After completing my DPhil, I pursued a career in scientific publishing, first at Springer Nature, then at
+                the Royal Society of Chemistry. I spent seven years in this industry, continually progressing to ultimatly become the head of a portfolio of well-respected scientific journals.</p> 
+                <p id="testing">As Executive Editor, I set the journals' strategic direction and had sigificant budget and team management responsibilities. Amoung many activites, I travelled to top universities around the world, from MIT to Tsinghua, to meet and collaborate with leading scientists.
+                I also had great opportunities to work with technology, UX and data science teams to improve our products and customer service.</p>
+
+            </div>
+                <!-- Editing Image -->
+            <div class="container_images" id="editing">        
+                <div class="cont_l_small" id="talk"></div>
+            </div>
+        </div>  
+        
+    <!-- Science and Journalism section-->
+        <div class="science_container">
+            <div class="science_main">
+                <h2 id="science_text">Science & Journalism</h2>
+                <p>I've published lots of work, both in science and journalism. I've been lucky enough to publish with some of the best scientists in the world,
+                   including with a Nobel laureate, and in some of the most widely-read publications, like Scientific American. Click on each of the cards below to find out more about some of my favourite pieces!</p>
+                <div class="sci_spacing">
+                    <div class="sci_card">
+                        <div class="sci_column">
+                            <a target="_blank" href=https://pubs.rsc.org/en/content/articlelanding/2010/AN/B916712A#!divAbstract">
+                                <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=B916712A&imageInfo.ImageIdentifier.Year=2010">
+                            </a>
+                            <a target="_blank" href="https://pubs.acs.org/doi/10.1021/jp500732u">
+                                <img src="https://pubs.acs.org/na101/home/literatum/publisher/achs/journals/content/jpcbfk/2014/jpcbfk.2014.118.issue-15/jp500732u/production/images/medium/jp-2014-00732u_0010.gif">
+                            </a>
+                            <a target="_blank" href="https://pubs.acs.org/doi/10.1021/ja206783t">
+                                <img src="https://pubs.acs.org/na101/home/literatum/publisher/achs/journals/content/jacsat/2011/jacsat.2011.133.issue-44/ja206783t/production/images/medium/ja-2011-06783t_0011.gif">
+                            </a>
+                        </div>
+                        <div class="sci_column">
+                            <a target="_blank" href="https://pubs.rsc.org/en/content/articlelanding/2011/LC/c1lc20854c#!divAbstract">
+                                <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=C1LC20854C&imageInfo.ImageIdentifier.Year=2011">
+                            </a>
+                            <a target="_blank" href="https://pubs.rsc.org/en/content/articlelanding/2015/NR/C4NR01600A#!divAbstract">    
+                                <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=C4NR01600A&imageInfo.ImageIdentifier.Year=2015">
+                            </a>
+                            <a target="_blank" href="https://www.chemistryworld.com/research/mercury-grabbing-ionic-liquids-hit-the-gas/8363.article">
+                                <img src="https://d2cbg94ubxgsnp.cloudfront.net/Pictures/380x253/9/8/4/87984_plantscrubber_comp_630m.jpg">
+                            </a>
+                        </div>   
+                        <div class="sci_column">
+                            <a target="_blank" href="https://www.scientificamerican.com/article/sensors-cleaned-by-light-could-drop-costs-of-detecting-pollution-or-disease/">
+                                <img src="https://d2cbg94ubxgsnp.cloudfront.net/Pictures/380x253/7/3/6/87736_photo-21-01-15-12-07-19_300tb.jpg">
+                            </a>
+                            <a target="_blank" href="https://www.chemistryworld.com/news/smart-stretch-expands-hip-implant-performance/3008154.article">
+                                <img src="https://d2cbg94ubxgsnp.cloudfront.net/Pictures/380x253/6/5/5/133655_Implants-index.jpg">
+                            </a>
+                            <a target="_blank" href="https://www.chemistryworld.com/news/colour-changing-graphene-skin-reveals-hidden-damage/3007082.article">
+                               <img src="https://d2cbg94ubxgsnp.cloudfront.net/Pictures/380x253/4/4/0/129440_Iridescent-fish-scales_shutterstock_586009376---Index.jpg"> 
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>  
+        
+        <!-- Get in touch secion-->
+              
+        <div class="contact" id="contact">
+            <p>Feel free to look further at my background and get in touch on <a target="_blank" href="https://www.linkedin.com/in/simonrtneil/?originalSubdomain=uk">LinkedIn</a></p>
+            
+        </div>
+
+        <!-- Footer section -->
+        <footer>
+            <div class="footer" id="attributions">
+                <a href="#top"><div class="to_top">&uarr;</div></a>
+                <ul>
+                   <li> Banner photo by Billy Huynh on Unsplash | </li>
+                   <li> Oxford photo by Sidharth Bhatia on Unsplash | </li>
+                   <li> Library/books photo by Susan Yin on Unsplash </li>
+                </ul>
+                
+            </div>
+        </footer>
+
+
+
+    </body>
+
+</html>
+

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <title>Simon's Short Sci-Fi</title>
+
+    <style>
+
+        * {
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            
+        }
+
+        html {
+            font-size: 18px;
+        }
+
+        header {
+           
+           width: 100%;
+            
+        }
+        
+        .banner {
+           
+           margin: auto;
+           background: url("https://images.unsplash.com/photo-1472712739516-7ad2b786e1f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); 
+           background-size: cover;
+           text-align: center;
+           padding: 5%;
+           /* margin-top: ; */
+        
+
+        }
+
+        .spaceman {
+            background-image: url("https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60");
+            height: 200px;
+            width: 200px;
+            background-size: contain;
+            display: inline-block;
+            border-radius: 50%;
+            border: 1px solid hsl(10, 100%, 100%) ;
+
+        }
+
+
+
+        .banner h1 {
+            color: hsl(10, 100%, 100%);
+            display: inline-block;
+            margin: 20px;
+            font-family: 'Kanit', sans-serif;
+          
+        }
+
+        @media screen and (min-width: 800px) {
+            .banner h1 {
+                position: relative;
+                bottom: 100px;
+            }
+        }
+
+        .first-letter {
+        float: left;
+        padding-right: 1.4rem;
+        font-family: 'Abril Fatface', cursive;
+        font-size: 7.44rem;
+        color: #10b0d8;
+        line-height: 0.87;
+        }
+
+
+        .dark_container {
+          text-align: center;
+        }
+
+
+        .dark {
+          position: relative;
+          /* display: inline-block; */
+          padding: 0.75rem;
+          background-color: hsl(0, 86%, 20%); 
+          background-image: linear-gradient(hsl(0, 86%, 31%),hsl(0, 86%, 90%));
+          margin-bottom: 5px;
+          color: black;
+          font-size: 1rem;
+          font-family: 'Kanit', sans-serif
+        
+        }
+
+        .light {
+          display: none;
+          position: relative;
+          /* display: inline-block; */
+          padding: 0.75rem;
+          background-color: hsl(133, 88%, 35%); 
+          background-image: linear-gradient(hsl(133, 88%, 35%),hsl(0, 86%, 90%));
+          margin-bottom: 5px;
+          color: black;
+          font-size: 1rem;
+          font-family: 'Kanit', sans-serif
+        
+        }
+
+  
+        ul {
+            /* width: 0 auto; */
+            margin-top: 0px;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            /* flex-grow: 1; */
+            list-style: none
+
+        }
+
+        li {
+          text-align: center;
+        }
+
+        li a {
+            list-style: none;
+            display: block;
+            color:  hsl(0, 7%, 60%);
+            background-color: hsla(0, 86%, 20%, 0.5);
+            width: 150px;
+            padding-top: 20px;
+            min-height: 90px;
+            border-radius: 10%;
+            margin: 10px;
+            font-family: 'Kanit', sans-serif;
+       
+        }
+
+        .intro_text {
+          margin: 0 auto;
+          width: 75%;
+          padding-left: 1%;
+        }
+
+        a:hover,
+        .story_tabs li a:hover {
+          background-color: hsl(0, 7%, 80%, 0.5);
+          color:  hsl(0, 86%, 20%);
+        }
+
+        p,
+        h2 {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        p {
+          margin-left: 1rem;
+        }
+
+        .story_tabs {
+            /* width: 0 auto; */
+            margin-top: 0px;
+            padding-right: 5px; 
+            background-color: black;
+            /* flex-grow: 1; */
+
+        }
+
+        .story_tabs li a {
+            list-style: none;
+            display: block;
+            color:  hsl(0, 7%, 60%);
+            background-color: hsla(0, 86%, 20%, 0.5);
+            width: 150px;
+            padding-top: 20px;
+            min-height: 60px;
+            border-radius: 0%;
+            margin: 5px;
+            font-family: 'Kanit', sans-serif;
+          
+        }
+
+        .tabs_container {
+          border: 2px solid black;
+          width: 75%;
+          text-align: left;
+          margin: 0 auto;
+          margin-bottom: 5px;
+        }
+
+        .first-letter {
+            /* float: left; */
+            padding-right: 0.5rem;
+            font-family: "Abril Fatface", serif;
+            font-size: 4rem;
+            color:  hsl(0, 86%, 20%);
+            line-height: 0.87;
+        }
+
+        .quote {
+        display: block;
+        padding: 3.3rem 0;
+        margin-bottom: 1rem;
+        border-top: 4px solid black;
+        border-bottom: 4px solid black;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+
+      .top_left {
+        border: none;
+        margin: 0;
+        padding: 1rem;
+        float: left;
+        font-size: 1.5rem;
+
+      }
+
+      .bottom_right {
+          font-size: 1.5rem;
+          padding: 10px;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+      }
+
+      @media screen and (max-width: 700px) {
+        
+        html {
+            font-size: 0.9rem;
+        }
+
+        .tabs_container {
+          border: 1px solid black;
+          width: 90%;
+          text-align: left;
+          margin: 0 auto;
+          margin-bottom: 5px;
+        }
+
+        li a {
+            width: 120px;
+            padding-top: 10px;
+            min-height: 80px;
+            margin: 5px;
+
+            }
+      }
+
+    </style>
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <div class="spaceman"></div>
+            <!-- <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"> -->
+            <h1>Simon's Short Sci-Fi Stories</h1>
+            <ul>
+                <li><a href="#about"> About me </a></li>
+                <li><a href="#story"> This month's story </a></li> 
+                <li><a href="#critics"> What critics say </a></li>
+            </ul>             
+        </div>
+    </header>
+
+    <!-- Intro secton -->
+        <div class="intro_text" id="about">
+               <p><span class="first-letter">I</span> am a budding short story writer. Despite not being very good at it, I continue unperturbed!</p>
+               <p>Below, you can find the first few parts to my latest short story, which has received feedback that ranges from scything criticism to back-handed complements! 
+                 <br> You can also find out more about me <b><a target="_blank" href="https://dash.generalassemb.ly/SimonN/build-your-own-personal-website" >here</a></b></p>
+        </div>
+
+    <!-- Dark mode section -->
+    <div class="dark_container">
+      <button class="dark" id="darkm" onclick="goDark()">Click here to read in deep-space mode</button>
+      <button class="light" id="lightm" onclick="goLight()">Back to light mode</button>
+    </div>
+    
+    <script>
+           
+      function goDark() {
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+        document.getElementsByTagName("BODY")[0].style.color = "white";
+         
+            let x = document.getElementById("darkm");
+            let y = document.getElementById("lightm");
+            if (x.style.display === "none") {
+              x.style.display = "inline-block";
+              y.style.display = "none";
+            } else {
+              x.style.display = "none";
+              y.style.display = "inline-block";
+            }
+
+          
+      };
+
+
+      function goLight() {
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+        document.getElementsByTagName("BODY")[0].style.color = "black";
+         
+        //  let x = document.getElementById("darkm");
+        //     if (x.style.display === "none") {
+        //       x.style.display = "block";
+        //     } else {
+        //       x.style.display = "none";
+        //     }
+
+            let x = document.getElementById("lightm");
+            let y = document.getElementById("darkm");
+            if (x.style.display === "none") {
+              x.style.display = "inline-block";
+              y.style.display = "none";
+            } else {
+              x.style.display = "none";
+              y.style.display = "inline-block";
+            }
+
+            // let y = document.getElementById("lightm");
+            // if (x.style.display === "block") {
+            //   y.style.display = "none";
+            // } else {
+            //   y.style.display = "block";
+            // }
+
+
+      };
+  
+      </script>
+
+
+    <!-- Story secton -->
+    <article id="story">
+      <div class="tabs_container">
+        <div id="tabs">
+              <ul class="story_tabs">
+                <li><a href="#tabs-1">Part 1</a></li>
+                <li><a href="#tabs-2">Part 2</a></li>
+                <li><a href="#tabs-3">Part 3</a></li>
+                <li><a href="#tabs-4">Part 4</a></li>
+              </ul>
+              <div id="tabs-1">
+                <h2>Part 1: A debt to pay</h2>
+                <p><span class="first-letter">B</span>orwian knew he ate when he was stressed. 
+                  Right now, he was continuously placing Flavour Shavings into his mouth. 
+                  Place, chew, swallow, place, chew, swallow, place. Ingesting the Shavings,
+                   which were not only advertised as the world's tastiest food but also banned in several countries,
+                    wasn't really in his best interest. He knew that. Their dangerously addictive mix of flavour enhancers, 
+                   tailored to his taste buds, did, however, ease the anxiety.</p>
+                <p> Borwian, furiously chewing, stared again at the letter on his table. </p>
+                <p><em> Mr Daiffur,</em></p>
+                <em><p>Payment on your account, detailed below, is PAST DUE. We have attempted to contact you on several occasions. The outstanding amount below must now be immediately paid in full.</p>
+                  <p>As per our terms and conditions, failure to pay the outstanding balance will result in foreclosure of your account. Foreclosure entitles Yara Corporation or one of its subsidiaries or representatives to seize your goods and to take over the rights to your personal data estate (that is, your Full Life) indefinitely, in accordance with the Data Banking Act of 2147.</p>
+                  <p>Account Holder: Borwian Hank Daiffur.</p>
+                  <p>Account balance, IN ARREARS: -1.5 Troy ounce.</p>
+                  <p>Please ensure payment is made within 21.1 hours.</p>
+                  <p>Best regards,</p>
+                  <p>Hilbert Norington-Smithes</p>
+                  <p>Head of Personal Data Banking Services,</p>
+                  <p>Yara Corporation</p></em>
+                  <p>Swallow, place, chew, swallow, place. Numbers dissolved and reformed on the e-paper. Please ensure payment is made within 21.0 hours. </p>
+                  <p><em>Groan,</em> chew, swallow, place, chew, swallow, place. </p>
+                  <p>The Shavings tube was getting empty now, the packaging's smart-label told him so, with an opaque little pulse of faded red. A new tube, automatically ordered, would be delivered to Borwian the next day, no doubt with the flavour modified to further increase consumption rate. 
+                  He flicked the near-empty tube away. It was an effort to ignore the rattle of the last few remaining Shavings as they rolled inside. They called out to him. Grab me back. He didn't. There were only two ways out of this mess, and neither were in that tube. He raised a middle finger to bid it farewell, as it tumbled off the desk, and he got up to leave. 
+                  </p>
+              </div>
+              <div id="tabs-2">
+                <h2>Part 2: A curious profession</h2>
+                <p>One hour, two metro-stops and an embarrassing number of wrong-turns later, Borwian stood at the edge of the city's old industrial zone on the sixth ring, outside what purported to be the offices of J. Himf And Sprat. On the faded brown door of the grey building, a mirror-polished brass plaque sat proudly out of place.</p>
+                  <p><em>J. Himf And Sprat,
+                  Databroking (1st Floor),
+                  Funeral Services (2nd Floor)</em></p>
+                  <p>‘Seems promising,' thought Borwian. Entering, he found himself in a surprisingly large and bright reception room. A small man sat behind a cheap teak desk. He noticed Borwian. Borwian noticed a disturbingly large number of doodles covering a sheet of e-paper in the man's hand. 
+                    Most looked like badly drawn swiss cheese. There were some suns with smiley faces too.</p>
+                  <p>"Welcome to J. Himf And Sprat, how can I help today?" The small man said, in a little-too-fast staccato rhythm. In the seconds since seeing Borwian, the man's face had changed from abject boredom to surprise to something more like hopefulness with a sprinkling of desperation. Borwian opened his mouth to speak, but the man continued. "Will it be Databroking that you require?" His head bobbed slightly, encouragingly, cheerfully up and down in time with the words. 
+                    "Or," the bobbing died, and his voice grew dramatically sombre, "funeral services?"</p>
+                  <p>"I …" Borwian started.</p>
+                  <p>"Or have you come to enquire about the secretary-slash-apprenticeship?" The man cut in. 
+                    He pointed to a weathered sign stuck to the wall.</p>
+                  <p><em>Secretary-slash-apprentice WANTED</em>, its faded script read, <em>must have good appreciation for personal data.</em></p>
+                  <p>The man seemed done now.</p> 
+                  <p>"I saw your site," Borwian said. "It says you offer a free consultation?" </p>
+                  <p>"Yes!" The man beamed. "We offer some services on a pay-what-you-can basis too. Any donations are very welcome, of course."</p> 
+                  <p>Borwian took the Yara Corp letter from his pocket and slid it over the desk.
+                     He was surprised at how quickly the small man's eyes flitted over the page. Tiny, urgent movements. </p>
+                  <p>"I see," the man said, looking up from the letter. 
+                    The head-bobbing was back, more ponderous now though, with steady eyes, fixed on Borwian. Borwian waited a few bobs, again uncertain whether it was his turn to speak.</p>
+                    <p> "Um, so, should I be speaking to J. Himf or Sprat?" He said, finally.</p>
+                  <p>A big bob of the head was accompanied now by raised eyebrows. "Yes! Absolutely, but," the man raised a placating hand,
+                     "just for clarity, it's J. Himf And Sprat." </p>
+                  <p>"Right … So, I should speak to both of them?" Glancing around, Borwian noticed for the first time that there was no-one else in the large room.</p>
+                  <p> "Who?" Oh! No-no-no," the man half squeaked, half chuckled. The bobbing was transposed, 
+                    sideways now. Suddenly, he shot up off his seat to stand, offering out his hand so 
+                    quickly that Borwian took an involuntary step back.</p>
+                    <p>"Only one," said the man, "Julius Himf And Sprat, at your service."</p> 
+                  <p>"You're, J. Himf And Sprat?"</p>
+                  <p>"Yes! A rather unfortunate place for a coordinating conjunction, in a name that is," 
+                    the man mused, "nevertheless, it is mine."</p>
+                  <p>Borwian took the man's still proffered hand. 
+                    The slight clamminess of its initial touch wasn't too bad, he decided, 
+                    given the warm vigour with which it subsequently shook up and down. </p>
+                 <p>"Doesn't everyone who comes in here get confused?" Borwian asked.
+                    "I mean, perhaps you should just lead with the fact that your name has the word ‘and' in it?"</p>
+                  <p>"Yes, I probably should," Himf And Sprat conceded.
+                     "It's just … well … it's been a little while since anyone has actually come in. No one seems to want a human databroker anymore …" His voice tailed off and eyes dropped to the floor.</p>
+                  <p>"Well, I'm looking for a human," said Borwian. </p>
+                  <p>Himf And Sprat brightened a little. "Yes, of course. Please, Mr Daiffur," 
+                    he said, a hand motioning grandly toward a set of stairs at the back of the room.
+                     "Accompany me, to the databrokerage."</p>
+                  
+              </div>
+              <div id="tabs-3">
+                <h2>Part 3: Full life</h2>
+                <p>"So, Full Life." Himf And Sprat said, settling himself into a plush leather office chair behind
+                   what was apparently the Databrokerage Desk, according to its little brass plaque.
+                    He waved the Yara Corp letter in his hand. "Did they show you a brochure?"</p>
+                  <p>"Yeah." Borwian remembered it. Smiling, pretty models on the cover.
+                  <em>Welcome to your new Full Life!
+                Live, care-free, always.</em></p>
+                  <p>"I want to make an informed choice." He added. "Based on my personal circumstances."</p>
+                  <p>"Very well," Himf And Sprat said. His eyes searched Borwian's. 
+                    "This is your free consultation." He put the letter down and splayed his hands. "Where would you like me to start?"</p>
+                  <p>"Assume I don't know anything. Explain it to me like I'm a kid."</p>
+                  <p>"Ok." Himf And Sprat took a breath. "A Full Life is … well … 
+                    it is everything about a person. 
+                    All your personal data. To ‘take over the rights to your personal data estate,' 
+                    as it says here," he pointed at the letter,
+                     "means that Yara Corp will own your Full Life in … " 
+                     e glanced at the text, "nineteen-point-eight hours. You will 
+                     give Yara Corp any data you previously owned, any data you will produce in future
+                     , from now until your death and beyond."</p>
+                  <p>"Beyond?" Borwian asked.</p>
+                  <p>"Yes, your Digital Remains would also belong to Yara Corp.
+                     So, all in all, Full Life is the zettabytes of your life, 
+                     compiled and stored and used, including beyond your death."</p>
+                 <p>"Well that's just great. Used for what?" Borwian asked.</p>
+                 <p> "Fundamentally, for the same thing that you no-doubt currently use your data for: 
+                   as a source of income. Right now, you as an individual have the right to bank 
+                   and sell your own personal data, yes? 
+                   Well, tomorrow, all else being equal, you will relinquish that right to Yara Corp.
+                    They will own your data and do broadly the same thing you did before:
+                     sell it to companies, in return for gold, or other data. </p>
+                  <p>Borwian took a long breath. "The brochure makes it look like a good thing. Is it?"</p>
+                  <p>Himf And Sprat drummed a couple of fingers pensively on his lips. "You know, perhaps it's better if you see it for yourself."
+                  </p>
+              </div>
+              <div id="tabs-4">
+                <h2>More to come soon! I'll post new parts each week. </h2>
+              </div>
+            </div>
+          </div>
+    </article>    
+
+  <!--Interact section-->  
+
+    <div>
+     
+
+  
+      
+   
+
+
+    </div>
+
+  <!-- Quote secton -->
+    
+  <span class="quote" id="critics">
+    <span class="quote top_left">What the critics say:</span>
+    "It's well-written, but couldn't you do something to make it more ... well ... interesting?"
+    <span class="bottom_right">Anonymous.</span>
+  </span>
+
+
+
+</body>
+
+<footer>Story &copy;Simon Neil | Spaceman photo by NASA on Unsplash | Banner photo by Nathan Anderson on Unsplash</footer>
+
+</html>

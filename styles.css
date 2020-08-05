@@ -164,16 +164,19 @@ body {
 }
 
 .panel1{
-    background-image: url('./anchor-lee-kO1G3neRA2o-unsplash.jpg');
+    background-image: url('./marjanblan-ADfPdLBMeY8-unsplash.jpg');
 }
 .panel2{
-    background-image: url('./bernard-hermant-PrZw3_3xUxI-unsplash.jpg');
+    background-image: url('./marjanblan-ADfPdLBMeY8-unsplash.jpg');
+    background-position: top;
 }
 .panel3{
-    background-image: url('./bernard-hermant-AKHh5Vie5AU-unsplash.jpg');
+    background-image: url('./marjanblan-ADfPdLBMeY8-unsplash.jpg');
+    background-position: 50vh;
 }
 .panel4{
-    background-image: url('./bernard-hermant-hmGvf0sC3-s-unsplash.jpg');
+    background-image: url('./marjanblan-ADfPdLBMeY8-unsplash.jpg');
+    background-position: bottom;
 }
 
  .writing_panel > * {

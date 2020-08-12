@@ -61,9 +61,13 @@
             <div class="row subRow">
                 <h1 class="display-4 name">Simon <span class='hl'>R.T.</span> Neil</h1>
             </div>
+
             <div class="row subRow">
-                <p class="hero">Developer</p>
+              <div class="hero text-box">
+                <span class="cursor"></span>
+              </div>
             </div>
+            
             <div class="row subRow">
                 <p class='text-box'>Experienced professional holding a DPhil (PhD) in Physical and Theoretical Chemistry
                     from the University of Oxford. General Assembly Software Engineering Fellow. Formerly the Executive Editor for a portfolio of world-renowned scientific journals. 
@@ -322,6 +326,71 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   
     <script>
+        
+    // Hero section (textype)
+
+      document.querySelector('.cursor').innerHTML = '|'
+      //number of times cursor will blink before typing starts
+      let countdown = 7
+
+      setTimeout(cursorBlink, 400)
+
+      //function for cursor to blink on and off, before typing starts
+      function cursorBlink(){
+        if (countdown <= 0){
+          setTimeout(addLetter, 500)
+          return
+        } 
+        if (countdown % 2 === 0){
+          document.querySelector('.cursor').style.color = 'black'
+        } else {
+          document.querySelector('.cursor').style.color = 'chartreuse'
+        }
+        countdown--
+        setTimeout(cursorBlink, 500)
+      }
+
+      // message to add
+      const inputMessage = 'Developer'
+      let currentMessage = ''
+      const currentDiv = document.querySelector('.hero')
+      let firstCall = true
+
+      // function to type message
+      function addLetter(letterIndexToAdd = 0){
+        if (currentMessage.length === inputMessage.length) {
+          currentDiv.removeChild(currentDiv.lastChild)
+          return
+        }
+        currentMessage = currentMessage + `${inputMessage[letterIndexToAdd]}`
+
+        const newLetter = document.createElement('span')
+        newLetter.innerHTML = `${inputMessage[letterIndexToAdd]}`
+        newLetter.classList.add('cursor')
+        const newCursor = document.createElement('span')
+        newCursor.innerHTML = '|'
+        newCursor.classList.add('cursor')
+
+        if (firstCall === true) {
+          console.log(`removing ${currentDiv.firstChild.innerHTML}`)
+          currentDiv.removeChild(document.querySelector('.cursor'))
+          console.log(`removing ${currentDiv.firstChild.innerHTML}`)
+        } else {
+          currentDiv.removeChild(currentDiv.lastChild)
+        }
+        currentDiv.appendChild(newLetter)
+        currentDiv.appendChild(newCursor)
+
+        firstCall = false
+
+        setTimeout(function (){
+          addLetter(letterIndexToAdd + 1)
+        }, 250)
+
+      }
+
+      // Writing panels section
+
         const writingPanels = document.querySelectorAll('.writing_panel');
     
         writingPanels.forEach(panel => panel.addEventListener('click', toggleExpand));

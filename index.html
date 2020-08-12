@@ -372,9 +372,7 @@
         newCursor.classList.add('cursor')
 
         if (firstCall === true) {
-          console.log(`removing ${currentDiv.firstChild.innerHTML}`)
           currentDiv.removeChild(document.querySelector('.cursor'))
-          console.log(`removing ${currentDiv.firstChild.innerHTML}`)
         } else {
           currentDiv.removeChild(currentDiv.lastChild)
         }

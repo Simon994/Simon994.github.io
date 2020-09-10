@@ -260,6 +260,24 @@ body {
     background-position: center;
   }  
 
+ /* Projects section  */
+
+    .carousel-caption.carousel-blurb{
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .carousel-blurb div{
+        padding: 30px 0 30px;
+    }
+
+
+    .blurb-text{
+      color: inherit;
+      font-family: 'Recursive', sans-serif;
+    }
 
   /* Footer section */
     footer {

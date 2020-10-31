@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
     position: relative;
@@ -39,35 +39,51 @@ body {
       text-align: center;
     }
 
-    .cursor{
-      color: chartreuse;
-      font-weight: bold;
-      font-size: 30px;
-      font-family: 'Courier New', Courier, monospace;
-    }
-
 /* About section */
     
-    .about_text{
-        height: 100vh;
+    .about_section{
+      background-color: aquamarine;
+      height: 100vh;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    .name{
-        font-family: 'Recursive', sans-serif;
-        font-weight: 700;
+
+    .about_inner{
+      display: flex;
+    }
+
+    .about_name{
+    }
+
+    .about_name h1{
+      font-family: 'Bebas Neue', cursive;
+      font-size: 60px;
+      text-align: right;
+      padding: 0 20px 0 50px;
     }
 
     .hl{
         color: rgba(0,0,0,.5); 
     }
 
-    .text-box{
-        width: 80%;
-        background-color: black;
+    .text_box_outer{
+      display: flex;
+      justify-content: center;
     }
 
-    p.text-box{
+    .text_box{
+        width: 80%;
+        max-width: 400px;
+        background-color: black;        
+    }
+
+    p.text_box{
         color: white;
         padding: 0 20px 10px 20px;
+        line-height: 1.75em;
     }
 
     #linkedIn{
